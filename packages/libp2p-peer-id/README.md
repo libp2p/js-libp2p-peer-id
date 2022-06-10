@@ -2,7 +2,7 @@
 
 [![test & maybe release](https://github.com/libp2p/js-libp2p-peer-id/actions/workflows/js-test-and-release.yml/badge.svg)](https://github.com/libp2p/js-libp2p-peer-id/actions/workflows/js-test-and-release.yml)
 
-> libp2p PeerId implementation in JavaScript
+> Implementation of @libp2p/interface-peer-d
 
 ## Table of contents <!-- omit in toc -->
 

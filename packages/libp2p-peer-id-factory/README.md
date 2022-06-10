@@ -2,7 +2,7 @@
 
 [![test & maybe release](https://github.com/libp2p/js-libp2p-peer-id/actions/workflows/js-test-and-release.yml/badge.svg)](https://github.com/libp2p/js-libp2p-peer-id/actions/workflows/js-test-and-release.yml)
 
-> IPFS Peer Id implementation in Node.js
+> Create PeerId instances
 
 ## Table of contents <!-- omit in toc -->
 
