@@ -243,9 +243,10 @@ describe('PeerId', () => {
     expect(ids[0].equals(ids[1].multihash.bytes)).to.equal(false)
   })
 
-  describe('fromJSON', () => {
+  describe('fromJSON / toJSON', () => {
     it('full node', async () => {
       const id = await PeerIdFactory.createEd25519PeerId()
+      // create manually
       const other = await PeerIdFactory.createFromJSON({
         id: id.toString(),
         privKey: id.privateKey != null ? uint8ArrayToString(id.privateKey, 'base64pad') : undefined,
@@ -254,6 +255,12 @@ describe('PeerId', () => {
       expect(id.toString()).to.equal(other.toString())
       expect(id.privateKey).to.equalBytes(other.privateKey)
       expect(id.publicKey).to.equalBytes(other.publicKey)
+
+      // create with export
+      const otherJsonId = await PeerIdFactory.createFromJSON(PeerIdFactory.exportToJSON(id))
+      expect(other.toString()).to.equal(otherJsonId.toString())
+      expect(other.privateKey).to.equalBytes(otherJsonId.privateKey)
+      expect(other.publicKey).to.equalBytes(otherJsonId.publicKey)
     })
 
     it('only id', async () => {
@@ -273,6 +280,19 @@ describe('PeerId', () => {
     it('go interop', async () => {
       const id = await PeerIdFactory.createFromJSON(goId)
       expect(id.toString()).to.eql(goId.id)
+
+      const jsonId = PeerIdFactory.exportToJSON(id)
+      expect(jsonId.id).to.deep.equal(goId.id)
+      expect(jsonId.privKey).to.deep.equal(goId.privKey)
+    })
+
+    it('export without private key', async () => {
+      const id = await PeerIdFactory.createEd25519PeerId()
+      const other = await PeerIdFactory.createFromJSON(PeerIdFactory.exportToJSON(id, true))
+
+      expect(other.toString()).to.equal(id.toString())
+      expect(other.privateKey).to.be.undefined()
+      expect(other.publicKey).to.equalBytes(id.publicKey)
     })
   })
 
