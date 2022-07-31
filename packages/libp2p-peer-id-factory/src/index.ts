@@ -39,11 +39,11 @@ export const createRSAPeerId = async (opts?: { bits: number }): Promise<RSAPeerI
 }
 
 export async function createFromPubKey (publicKey: PublicKey): Promise<PeerId> {
-  return peerIdFromKeys(marshalPublicKey(publicKey))
+  return await peerIdFromKeys(marshalPublicKey(publicKey))
 }
 
 export async function createFromPrivKey (privateKey: PrivateKey): Promise<PeerId> {
-  return peerIdFromKeys(marshalPublicKey(privateKey.public), marshalPrivateKey(privateKey))
+  return await peerIdFromKeys(marshalPublicKey(privateKey.public), marshalPrivateKey(privateKey))
 }
 
 export function exportToProtobuf (peerId: RSAPeerId | Ed25519PeerId | Secp256k1PeerId, excludePrivateKey?: boolean): Uint8Array {
