@@ -153,7 +153,7 @@
   },
   "devDependencies": {
     "aegir": "^37.0.7",
-    "protons": "^4.0.1",
+    "protons": "^5.0.0",
     "util": "^0.12.4"
   }
 }
