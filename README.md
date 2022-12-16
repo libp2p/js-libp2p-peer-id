@@ -3,7 +3,7 @@
 [![libp2p.io](https://img.shields.io/badge/project-libp2p-yellow.svg?style=flat-square)](http://libp2p.io/)
 [![Discuss](https://img.shields.io/discourse/https/discuss.libp2p.io/posts.svg?style=flat-square)](https://discuss.libp2p.io)
 [![codecov](https://img.shields.io/codecov/c/github/libp2p/js-libp2p-peer-id.svg?style=flat-square)](https://codecov.io/gh/libp2p/js-libp2p-peer-id)
-[![CI](https://img.shields.io/github/workflow/status/libp2p/js-libp2p-peer-id/test%20&%20maybe%20release/master?style=flat-square)](https://github.com/libp2p/js-libp2p-peer-id/actions/workflows/js-test-and-release.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/libp2p/js-libp2p-peer-id/js-test-and-release.yml?branch=master\&style=flat-square)](https://github.com/libp2p/js-libp2p-peer-id/actions/workflows/js-test-and-release.yml?query=branch%3Amaster)
 
 > PeerId implementation and factory in JavaScript
 
