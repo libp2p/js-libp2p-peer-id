@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "aegir": "^37.7.5",
-    "lerna": "^5.0.0",
+    "lerna": "^6.3.0",
     "rimraf": "^3.0.2"
   },
   "workspaces": [
