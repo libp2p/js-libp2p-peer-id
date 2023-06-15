@@ -153,8 +153,7 @@
   },
   "devDependencies": {
     "aegir": "^39.0.10",
-    "protons": "^7.0.2",
-    "util": "^0.12.4"
+    "protons": "^7.0.2"
   },
   "typedoc": {
     "entryPoint": "./src/index.ts"
