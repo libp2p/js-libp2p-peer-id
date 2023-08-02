@@ -40,7 +40,7 @@
     "release": "npm run docs:no-publish && aegir run release && npm run docs"
   },
   "dependencies": {
-    "aegir": "^39.0.10"
+    "aegir": "^40.0.0"
   },
   "workspaces": [
     "packages/*"
